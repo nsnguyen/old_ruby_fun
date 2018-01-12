@@ -1,0 +1,18 @@
+<h1> Editing A Person </h1>
+<%= form_for(:person) do |f| %>
+  <div class="field">
+    <%= f.label :name %><br>
+    <%= f.text_field :name, :value => @person.name %>
+  </div>
+  <div class="field">
+    <%= f.label :age %><br>
+    <%= f.text_field :age, :value => @person.age %>
+  </div>
+  <div class="field">
+    <%= f.label :alive %><br>
+    <%= f.text_field :alive, :value => @person.alive %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

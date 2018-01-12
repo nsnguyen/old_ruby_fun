@@ -1,0 +1,15 @@
+<html>
+<head>
+	<title>Listing Courses</title>
+</head>
+
+<body>
+	<%@courses.each do |course|%>
+	<a href="/courses/<%= course.id %>"><%= course.number %></a><br>
+    | <a href="/courses/<%= course.id %>/delete"> Delete? </a>
+    | <a href="/courses/<%= course.id %>/edit"> Edit? </a>	
+	| <a href="/courses/new"> New? </a>	
+	<% end %>
+</body>
+
+</html>

@@ -1,0 +1,26 @@
+<h1>Listing Pets</h1>
+<table>
+<tr>
+<th>PetName</th>
+<th>Owner</th>
+<th>PetWalker</th>
+<th>ApptDate</th>
+<th>ApptLength</th>
+<th></th>
+<th></th>
+<th></th>
+</tr>
+
+<% @pets.each do |pet| %>
+<tr>
+  <td><%= pet.PetName %></td>
+  <td><%= pet.Owner %></td>
+  <td><%= pet.PetWalker %></td>
+  <td><%= pet.ApptDate %></td>
+  <td><%= pet.ApptLength %></td>
+  <td><%= link_to 'Show', pet %></td>
+  <td><%= link_to 'Edit', edit_pet_path(pet) %></td>
+  <td><%= link_to 'Destroy', pet, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
+<% end %>
+</table>

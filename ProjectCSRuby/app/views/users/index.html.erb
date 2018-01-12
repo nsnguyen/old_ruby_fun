@@ -1,0 +1,14 @@
+<html>
+<head><title>Listing Users</title></head>
+<body>
+Here are links to the Users in the database!<br>
+<% @users.each do |user| %>
+  <a href="/users/<%= user.id %>"><%= user.username %></a>
+  | <a href="/users/<%= user.id %>/delete"> Delete? </a>
+  | <a href="/users/<%= user.id %>/edit"> Edit? </a>
+  <br>
+<% end %>
+
+
+</body>
+</html>

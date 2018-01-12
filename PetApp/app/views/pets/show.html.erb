@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Petname:</strong>
+  <%= @pet.petname %>
+</p>
+
+<p>
+  <strong>Owner:</strong>
+  <%= @pet.owner %>
+</p>
+
+<p>
+  <strong>Petwalker:</strong>
+  <%= @pet.petwalker %>
+</p>
+
+<p>
+  <strong>Apptdate:</strong>
+  <%= @pet.apptdate %>
+</p>
+
+<p>
+  <strong>Apptlength:</strong>
+  <%= @pet.apptlength %>
+</p>
+
+<%= link_to 'Edit', edit_pet_path(@pet) %> |
+<%= link_to 'Back', pets_path %>

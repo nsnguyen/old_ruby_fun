@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>PetApp</title>
+  <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<span style="text-align:right">
+ <%= form_tag "/pet/find" do %>
+    <%= text_field_tag :search_string %>
+    <%= submit_tag "Search" %>
+ <% end %>
+</span>
+
+<%= yield %>
+
+</body>
+</html>
